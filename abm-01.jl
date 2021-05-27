@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.7
 
 using Markdown
 using InteractiveUtils
@@ -218,31 +218,23 @@ function agent_step!(agent::PoorSoul, model)
     recover_or_die!(agent, model)
 end
 
-# ╔═╡ bcee6280-2b48-4bf5-a975-96637d1bfde2
-total_infected(m) = count(a.status == :I for a in allagents(m))
-
-# ╔═╡ 787286dd-f0bb-4278-8220-f81f7e87ab44
-"Coloring infected node"
-infected_fraction(xs) = cgrad(:inferno)[count(x.status == :I for x in xs) / length(xs)]
-
-# ╔═╡ 86a11e20-3a6c-46ef-b062-f3de19d2db75
-xpos = sinpi.(range(0, 2, length=9)[1:8])
-
-# ╔═╡ 59383688-ea08-4a1b-ab9d-adc1bc1874ec
-ypos = cospi.(range(0, 2, length=9)[1:8])
-
 # ╔═╡ 0a003441-169a-4e2f-9c27-3c074d9606a2
-begin
-	model = make_SIRgraph(; SIRgraphparams...)
+let model = make_SIRgraph(; SIRgraphparams...)
 	anim = @animate for i in 1:40
 		Agents.step!(model, agent_step!, 1)
-		infected = total_infected(model)
-		abm_plot_on_graph(model; 
-			size= (600, 600),
-			ac = infected_fraction, 
-			curves=false,
-			x=xpos, y=ypos,
-			title = "Step $i: $infected infected")
+		
+		
+		cityPops = length.(model.space.s)
+		xs = 1:length(cityPops)
+		infected = map(x -> count(model[id].status == :I for id in x), model.space.s)
+		infectedTotal = sum(infected)
+		
+		
+		pl = bar(xs, cityPops, label="Total")
+		bar!(pl, xs, infected, label="Infected", 
+			 xlabel="City", ylabel="Population",
+			 title = "Step $i: $infectedTotal infected"
+		)
 	end
 	
 	mp4(anim, fps = 5)
@@ -270,10 +262,6 @@ Running environment and some auxillary functions.
 # ╠═538e400e-5832-474b-aa32-7fc4d311577b
 # ╠═1b2e2fb0-d5f1-4e47-a593-fddf9c10c8b8
 # ╠═44745a79-2f35-4b2d-881c-8fbf07c918d7
-# ╠═bcee6280-2b48-4bf5-a975-96637d1bfde2
-# ╠═787286dd-f0bb-4278-8220-f81f7e87ab44
-# ╠═86a11e20-3a6c-46ef-b062-f3de19d2db75
-# ╠═59383688-ea08-4a1b-ab9d-adc1bc1874ec
 # ╠═0a003441-169a-4e2f-9c27-3c074d9606a2
 # ╠═7ad1fc2b-d4d6-4431-a06a-e8fda045bee6
 # ╠═49674784-f070-488d-b53b-9cebf0ce101e

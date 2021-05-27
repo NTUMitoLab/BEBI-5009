@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.7
 
 using Markdown
 using InteractiveUtils
@@ -36,7 +36,7 @@ The most obvious example of ABM is non-player characters (NPCs) in computer game
 
 ABM is able to model heterogeneously, i.e. it does not require the environment to be well stirred (as opposed to ODEs), continuous (as opposed to to PDEs), nor need the characteristics of each kind of agents to be identical (as opposed to SSAs). 
 
-This gives ABM more flexible to model individual behaviors. (e.g. traffic jam, disease spread, molecular interactions)
+This makes ABM more flexible to model individual behaviors. (e.g. traffic jam, disease spread, molecular interactions)
 """
 
 # ╔═╡ 529ac59e-5cdc-42f9-a2c3-8a36c3ef551d
@@ -202,8 +202,8 @@ Running environment and some auxillary functions.
 
 # ╔═╡ Cell order:
 # ╠═af61b274-831b-4fac-bc84-ab365867ddb3
-# ╠═529ac59e-5cdc-42f9-a2c3-8a36c3ef551d
-# ╠═eac86881-943f-41e9-a085-64ef2ad1554b
+# ╟─529ac59e-5cdc-42f9-a2c3-8a36c3ef551d
+# ╟─eac86881-943f-41e9-a085-64ef2ad1554b
 # ╠═9668dd2f-42a0-4a1a-80f5-152af1074154
 # ╠═21a958a2-b535-4735-8b90-27ff2580858a
 # ╠═0d4fd70d-892f-45d9-97a8-5e31e516ae9f
