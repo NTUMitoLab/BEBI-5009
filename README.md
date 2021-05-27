@@ -2,7 +2,7 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/sosiristseng/pluto-notebooks) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sosiristseng/pluto-notebooks)
 
-I'm gathering examples and trasnplate them into Pluto Notebooks.
+I'm gathering examples and trasnlating them into Pluto Notebooks.
 
 ## Environment setup
 
