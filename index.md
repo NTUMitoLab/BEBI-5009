@@ -38,7 +38,19 @@ Figure for textbooks [Mathematical modeling of Systems biology (pdf)](https://ww
 
 ## PlotsGallery.jl in Pluto (WIP)
 
-Source from [PlotsGallery.jl](https://github.com/goropikari/PlotsGallery.jl) by [goropikari](https://github.com/goropikari), which is under the   MIT license.
+Source from [PlotsGallery.jl](https://github.com/goropikari/PlotsGallery.jl) by [goropikari](https://github.com/goropikari), which is under the  MIT license.
+
+- [01 Line plots](plotsgallery/01-line.html)
+- [02 DateTime plots](plotsgallery/02-datetime.html)
+- [03 Log scale plots](plotsgallery/03-log.html)
+- [04 Histograms](plotsgallery/04-histogram.html)
+- [05 Bar plots](plotsgallery/05-bar.html)
+- [06 Box plots](plotsgallery/06-box.html)
+- [07 Heatmaps](plotsgallery/07-heatmap.html)
+- [08 Pie plots](plotsgallery/08-pie.html)
+- [09 Contour plots](plotsgallery/09-contour.html)
+- [10 Polar plots](plotsgallery/10-polar.html)
+- [11 Scatter plots](plotsgallery/11-scatter.html)
 
 ## PyPlot examples (WIP)
 
