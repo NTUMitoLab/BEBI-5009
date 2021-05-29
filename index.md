@@ -1,12 +1,6 @@
-# My Pluto notebooks
+# Pluto notebooks about Mathematical Modeling of Systems Biology (MMSB)
 
-Practicing Julia with 
-
-- [Pluto](https://github.com/fonsp/Pluto.jl) noteboooks, a light-weight and reactive Julia programming environment.
-- [GitHub actions](https://github.com/features/actions) to ensure smooth running of code.
-- Publishing the results with GitHub pages.
-
-## Mathematical Modeling of Systems Biology (MMSB)
+## Textbook Figures
 
 Figure for textbooks [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
 
@@ -36,34 +30,13 @@ Figure for textbooks [Mathematical modeling of Systems biology (pdf)](https://ww
 - [Fig 4-18](mmsb/fig-04-18.html)
 - [Fig 4-22](mmsb/fig-04-22.html)
 
-## PlotsGallery.jl in Pluto (WIP)
+## Agent-Based modeling (ABM)
 
-Source from [PlotsGallery.jl](https://github.com/goropikari/PlotsGallery.jl) by [goropikari](https://github.com/goropikari), which is under the  MIT license.
+- [Introductory example: Schelling's segregation model](abm-00.html)
+- [Graph space example: The spread of SARS-CoV-2](abm-01.html)
 
-- [01 Line plos](plotsgallery/01-line.html)
-- [02 DateTime plot](plotsgallery/02-datetime.html)
-- [03 Log scale plot](plotsgallery/03-log.html)
-- [04 Histogram](plotsgallery/04-histogram.html)
-- [05 Bar plot](plotsgallery/05-bar.html)
-- [06 Box plot](plotsgallery/06-box.html)
-- [07 Heatmap](plotsgallery/07-heatmap.html)
-- [08 Pie plot](plotsgallery/08-pie.html)
-- [09 Contour plot](plotsgallery/09-contour.html)
-- [10 Polar plot](plotsgallery/10-polar.html)
-- [11 Scatter plot](plotsgallery/11-scatter.html)
-- [12 Stem plot](plotsgallery/12-stem.html)
-- [13 Staircase plot](plotsgallery/13-stair.html)
-- [14 Error bars](plotsgallery/14-errorbar.html)
-- [15 Two y Axis](plotsgallery/15-twinx.html)
-- [16 Subplots](plotsgallery/16-subplot.html)
-- [17 Quiver plot](plotsgallery/17-quiver.html)
-- [18 Surface plot](plotsgallery/18-surface.html)
-- [19 Line Colors and Styles](plotsgallery/19-linestyles.html)
+## How it works
 
-## PyPlot examples (WIP)
-
-The [PyPlot examples](https://gist.github.com/gizmaa/7214002) is from by [gizmaa](https://gist.github.com/gizmaa).
-
-## And More
-
-Coming soon
+- [Pluto](https://github.com/fonsp/Pluto.jl) noteboooks, a light-weight and reactive Julia programming environment.
+- [GitHub actions](https://github.com/features/actions) to ensure smooth running of code.
+- Publishing the results with GitHub pages.
