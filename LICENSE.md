@@ -1,3 +1,7 @@
+The Agents.jl part is licensed under the MIT "Expat" License
+
+The code for MMSB textbook figures is unlicense.
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
