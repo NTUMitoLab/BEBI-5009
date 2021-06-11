@@ -1,5 +1,17 @@
 # Pluto notebooks about Mathematical Modeling of Systems Biology (MMSB)
 
+## Introduction to Julia
+
+For class BEBI-5009 (Mathematical Modeling of Systems Biology, MMSB)
+
+- [Introduction to Julia](intro-to-julia.html)
+
+
+## Agent-Based modeling (ABM)
+
+- [Introductory example: Schelling's segregation model](abm-00.html)
+- [Graph space example: The spread of SARS-CoV-2](abm-01.html)
+
 ## Textbook Figures
 
 Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
@@ -29,11 +41,6 @@ Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwat
 - [Fig 4-15](mmsb/fig-04-15.html)
 - [Fig 4-18](mmsb/fig-04-18.html)
 - [Fig 4-22](mmsb/fig-04-22.html)
-
-## Agent-Based modeling (ABM)
-
-- [Introductory example: Schelling's segregation model](abm-00.html)
-- [Graph space example: The spread of SARS-CoV-2](abm-01.html)
 
 ## How it works
 
