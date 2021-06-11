@@ -2,7 +2,7 @@
 
 ## Textbook Figures
 
-Figure for textbooks [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
+Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
 
 ### Chapter 1
 
