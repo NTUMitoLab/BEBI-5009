@@ -32,7 +32,7 @@ Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwat
 ### Chapter 3
 
 - [Fig 3-03](mmsb/fig-03-03.html)
-- [Prob 3-7-5](mmsb/prob-03-07-05.jl)
+- [Prob 3-7-5](mmsb/prob-03-07-05.html)
 
 ### Chapter 4
 
