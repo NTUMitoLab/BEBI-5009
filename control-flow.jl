@@ -76,6 +76,12 @@ https://en.wikipedia.org › wiki › Short-circuit_evaluation).
 - In the expression `a || b`, the subexpression `b` is only evaluated if `a` evaluates to false.
 """
 
+# ╔═╡ 0335796f-da7d-4acc-be19-a0b45cd6042a
+true && 1  # && evaluates and returns the second argument if the first is true
+
+# ╔═╡ 2ee995ac-d9e8-4ded-b6b9-5fd35d564a24
+false && 1  # && otherwise returns false
+
 # ╔═╡ ce2cbdb6-637d-4f07-bb91-580621485b66
 score = 10
 
@@ -268,8 +274,19 @@ end
 And they are called with `plot(x, y, width=2)` or `plot(x, y; width=2)`
 """
 
-# ╔═╡ a8129dcc-c291-4e2c-bde1-4f77b007fc6b
+# ╔═╡ d2e2e668-71f5-444b-98bf-5ea45df81c84
+args_kwargs(args...; kwargs...) = (args, kwargs)  # mind the semicolon ;
+
+# ╔═╡ 91e0412a-24ef-469a-9a67-3dcfa155d62a
+args_kwargs(1,true, :IAmASymbol, b=4, c="IAmAString")
+
+# ╔═╡ 33a48540-cb59-11eb-0602-8da0ecdcbe4c
 md"""
+# Appendix
+Running environment and some auxillary functions.
+	
+**You can use [this helper tool](https://fonsp.com/article-test-3/pkghelper.html) to generate these commands!**
+
 ## See also
 
 - [Compositing functions and pipes](https://docs.julialang.org/en/v1/manual/functions/#Function-composition-and-piping)
@@ -278,17 +295,11 @@ md"""
 - [Scope of variables](https://docs.julialang.org/en/v1/manual/variables-and-scoping/)
 """
 
-# ╔═╡ 33a48540-cb59-11eb-0602-8da0ecdcbe4c
-md"""
-# Appendix
-Running environment and some auxillary functions.
-	
-**You can use [this helper tool](https://fonsp.com/article-test-3/pkghelper.html) to generate these commands!**
-"""
-
 # ╔═╡ Cell order:
 # ╠═7553b887-a16d-4f3b-a91b-043f89e963d7
 # ╠═383e7736-dd64-44ce-ac21-60a9a5a7c0db
+# ╠═0335796f-da7d-4acc-be19-a0b45cd6042a
+# ╠═2ee995ac-d9e8-4ded-b6b9-5fd35d564a24
 # ╠═ce2cbdb6-637d-4f07-bb91-580621485b66
 # ╠═648e6be1-5e8b-4406-bee5-708a93ea20f3
 # ╠═2732609d-86f3-4594-8f02-4f8066d41720
@@ -311,6 +322,7 @@ Running environment and some auxillary functions.
 # ╠═e2801350-24b7-4453-af27-ee63afbb4087
 # ╠═2f07f81c-346a-4f17-872c-f174adf6ff1d
 # ╠═ea04a83f-74a1-46b0-b686-f125e0972ca2
-# ╠═a8129dcc-c291-4e2c-bde1-4f77b007fc6b
+# ╠═d2e2e668-71f5-444b-98bf-5ea45df81c84
+# ╠═91e0412a-24ef-469a-9a67-3dcfa155d62a
 # ╠═33a48540-cb59-11eb-0602-8da0ecdcbe4c
 # ╠═d7ff772c-9d33-42e7-9df1-3e02ceee79c5

@@ -6,6 +6,7 @@ For class BEBI-5009 (Mathematical Modeling of Systems Biology, MMSB)
 
 - [Introduction to Julia](intro-to-julia.html)
 - [Control flow and functions](control-flow.html)
+- [Collections, broadcasting, methods, and Package management](collections-dot-methods.html)
 
 
 ## Agent-Based modeling (ABM)
