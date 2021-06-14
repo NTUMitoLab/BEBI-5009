@@ -275,6 +275,7 @@ md"""
 - [Compositing functions and pipes](https://docs.julialang.org/en/v1/manual/functions/#Function-composition-and-piping)
 - [Variable argument (vararg) functions](https://docs.julialang.org/en/v1/manual/functions/#Varargs-Functions)
 - [Argument destructuring](https://docs.julialang.org/en/v1/manual/functions/#Argument-destructuring)
+- [Scope of variables](https://docs.julialang.org/en/v1/manual/variables-and-scoping/)
 """
 
 # ╔═╡ 33a48540-cb59-11eb-0602-8da0ecdcbe4c
