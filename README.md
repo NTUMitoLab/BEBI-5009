@@ -21,5 +21,5 @@ For class BEBI-5009 (Mathematical Modeling of Systems Biology, MMSB)
 ## How it works
 
 - [Pluto](https://github.com/fonsp/Pluto.jl) noteboooks, a light-weight and reactive Julia programming environment.
-- [GitHub actions](https://github.com/features/actions) to ensure smooth running of code.
-- Publishing the results with GitHub pages.
+- [GitHub actions](https://github.com/features/actions) test and build the notebooks.
+- The results are published to GitHub pages.
