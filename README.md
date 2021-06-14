@@ -1,23 +1,55 @@
-# My Pluto Notebooks
+# Pluto Notebooks
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/sosiristseng/pluto-notebooks) ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/sosiristseng/pluto-notebooks)
 
-I'm gathering examples and trasnlating them into Pluto Notebooks.
+I'm gathering Julia examples and translating them into Pluto Notebooks.
 
-## Environment setup
+## Introduction to Julia
 
-**You can use [this helper tool](https://fonsp.com/article-test-3/pkghelper.html) to generate these commands!**
+For class BEBI-5009 (Mathematical Modeling of Systems Biology, MMSB)
 
-**Important to note:**
+- [Introduction to Julia](intro-to-julia.html)
+- [Control flow and functions](control-flow.html)
+- [Collections, broadcasting, methods, and Package management](collections-dot-methods.html)
 
--   Place the Pkg commands and the imports in the same cell.
--   You can use the same setup when running your notebook locally. Julia will re-use existing package installations, so this will only download and install packages the first time.
 
-_In the future, Pluto will automate this process for you!_
+## Agent-Based modeling (ABM)
 
-## Homepage setup
+- [Introductory example: Schelling's segregation model](abm-00.html)
+- [Graph space example: The spread of SARS-CoV-2](abm-01.html)
 
-If you go to the (GitHub Pages) URL of repository, you will see a small index of the notebooks in this repository. You can customize this page, two options are:
+## Textbook Figures
 
--   Create your own `index.html` or `index.md` file, it will be used as the homepage.
--   Rename one of your notebooks to `index.jl`, and it will be the default notebook!
+Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
+
+### Chapter 1
+
+- [Fig 1-07](mmsb/fig-01-07.html)
+- [Fig 1-09](mmsb/fig-01-09.html)
+
+### Chapter 2
+
+- [Fig 2-04](mmsb/fig-02-04.html)
+- [Fig 2-09](mmsb/fig-02-09.html)
+- [Fig 2-11](mmsb/fig-02-11.html)
+- [Prob 2-4-6](mmsb/prob-02-04-06.html)
+
+### Chapter 3
+
+- [Fig 3-03](mmsb/fig-03-03.html)
+- [Prob 3-7-5](mmsb/prob-03-07-05.html)
+
+### Chapter 4
+
+- [Fig 4-01](mmsb/fig-04-01.html)
+- [Fig 4-07](mmsb/fig-04-07.html)
+- [Fig 4-11](mmsb/fig-04-11.html)
+- [Fig 4-15](mmsb/fig-04-15.html)
+- [Fig 4-18](mmsb/fig-04-18.html)
+- [Fig 4-22](mmsb/fig-04-22.html)
+
+## How it works
+
+- [Pluto](https://github.com/fonsp/Pluto.jl) noteboooks, a light-weight and reactive Julia programming environment.
+- [GitHub actions](https://github.com/features/actions) to ensure smooth running of code.
+- Publishing the results with GitHub pages.
