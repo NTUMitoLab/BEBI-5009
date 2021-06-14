@@ -18,7 +18,7 @@ For class BEBI-5009 (Mathematical Modeling of Systems Biology, MMSB)
 - [Introductory example: Schelling's segregation model](abm-00.html)
 - [Graph space example: The spread of SARS-CoV-2](abm-01.html)
 
-## Textbook Figures
+## MMSB Textbook Figures
 
 Textbook: [Mathematical modeling of Systems biology (pdf)](https://www.math.uwaterloo.ca/~bingalls/MMSB/MMSB_w_solutions.pdf)
 
