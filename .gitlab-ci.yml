@@ -1,4 +1,10 @@
-image: julia:1.6                # image comes from Docker hub
+image: julia:1.6
+
+# Cache modules in between jobs
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - pluto_state_cache/
 
 before_script:
 - julia -e 'using Pkg;
