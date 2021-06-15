@@ -23,7 +23,7 @@ md"""
 - [Julia docs | functions](https://docs.julialang.org/en/v1/manual/functions/)
 
 
-Julia code is able to run in a nonlinear manner.
+Julia programs are able to run nonlinearly by controlling its execution flow.
 """
 
 # ╔═╡ 383e7736-dd64-44ce-ac21-60a9a5a7c0db
