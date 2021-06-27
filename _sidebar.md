@@ -1,4 +1,2 @@
 - [Home](/)
-- [Plots Gallery](/plotsgallery/README.md)
-- [PyPlot Gallery](/pyplot/README.md)
 - [MMSB figures](/mmsb/README.md)

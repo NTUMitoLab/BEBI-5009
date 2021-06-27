@@ -1,4 +1,4 @@
-The Agents.jl part is licensed under the MIT "Expat" License
+The `Agents.jl` part is licensed under the MIT "Expat" License
 
 The rest of code is unlicense.
 
