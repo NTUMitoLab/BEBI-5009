@@ -84,17 +84,13 @@ Pluto.run()
 
 !> Another IDE, [Juno](https://junolab.org), entered [in maintenance mode](https://www.youtube.com/watch?v=rQ7D1lXt3GM) in 2020. It is recommended to use VSCode now.
 
-### Cloud-based solutions
-
-If your computer is not powerful enough to run Julia.
-
-#### Google collab
+### Google collab
 
 Open this [Julia for Pythonistas](https://colab.research.google.com/github/ageron/julia_notebooks/blob/master/Julia_for_Pythonistas.ipynb) notebook, save a copy to your Google drive, and run it.
 
 You'll need to reload the browser window after the first cell is executed to load the Julia kernel. Also there is no syntax highlighting for Julia in that environment.
 
-#### Nextjournal
+### Nextjournal
 
 [Nextjournal](https://nextjournal.com/) hosts playable notebooks for reproducible research.
 
@@ -103,6 +99,7 @@ You'll need to reload the browser window after the first cell is executed to loa
 - [Introduction to Julia](intro-to-julia.html ":ignore")
 - [Control flow and functions](control-flow.html ":ignore")
 - [Collections, broadcasting, methods, and Package management](collections-dot-methods.html ":ignore")
+- [Introduction to Plotting](plotting.html ":ignore")
 - [Stachastic simulation algorithms (SSAs)](ssa.html ":ignore")
 
 ### Agent-Based modeling (ABM)
