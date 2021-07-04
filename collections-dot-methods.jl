@@ -17,6 +17,7 @@ end
 
 # ╔═╡ c9e98b87-7187-4a38-acab-1a93519160c2
 md"""
+# Collections, broadcasting, and Methods
 Using built-in collections is the simplest way to group and organize data.
 
 The values in a `immutable` collection cannot be updated after its creation, while in a `mutable` collection can.
