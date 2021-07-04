@@ -1,6 +1,6 @@
 The `Agents.jl` part is licensed under the MIT "Expat" License
 
-The rest of code is unlicense.
+The rest of code is under unlicense:
 
 This is free and unencumbered software released into the public domain.
 
