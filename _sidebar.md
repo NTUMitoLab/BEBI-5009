@@ -1,2 +1,2 @@
 - [Home](/)
-- [MMSB figures](/mmsb/README.md)
+- [MMSB textbook figures](/mmsb/README.md)
