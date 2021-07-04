@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -50,7 +50,7 @@ u0 = LVector(a=0.0, b=0.0, c=0.0, d=0.0)
 tend = 10.0
 
 # ╔═╡ 01aed17a-ea97-414e-b3cf-011d0dee8ede
-sol = solve(ODEProblem(model!, u0, tend))
+sol = solve(ODEProblem(model!, u0, tend));
 
 # ╔═╡ feb6ae90-53a9-485f-a088-2f868400574e
 plot(sol, xlims=(0.0, 4.0), ylims=(0.0, 1.0), 
@@ -65,14 +65,6 @@ Running environment and some auxillary functions.
 **You can use [this helper tool](https://fonsp.com/article-test-3/pkghelper.html) to generate these commands!**
 """
 
-# ╔═╡ a4d8bd30-d791-46ff-ad17-7737f8e5852a
-begin
-	# Convenience functions
-    hill(x, k) = x / (x + k)
-    hill(x, k, n) = hill(x^n, k^n)
-    exprel(x) = ifelse(x≈zero(x), one(x), x / expm1(x))
-end
-
 # ╔═╡ Cell order:
 # ╠═eb59c8c0-bdcc-11eb-2d91-69018c56b6b6
 # ╠═2a4dd196-427f-4077-8c98-ed8b6ac8ad3b
@@ -81,5 +73,4 @@ end
 # ╠═01aed17a-ea97-414e-b3cf-011d0dee8ede
 # ╠═feb6ae90-53a9-485f-a088-2f868400574e
 # ╠═8fae9318-8099-41fa-a074-66bd778d37a1
-# ╠═a4d8bd30-d791-46ff-ad17-7737f8e5852a
 # ╠═5f780c3c-27d7-492d-b7f3-76bf4d74f0b8

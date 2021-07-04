@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -46,14 +46,6 @@ function fullmodel!(du, u, p, t)
 	return du
 end
 
-# ╔═╡ d0392260-fbf8-4caa-baaa-4b282c45be5c
-# Fig 2.12: rapid equilibrium
-function remodel!(du, u, p, t)
-	@unpack K0, K1, KM1, K2 = p
-	kb = K2 * K1 / (KM1 + K1)
-	du.b = K0 - kb * u.b
-end
-
 # ╔═╡ f856c00b-af34-49b4-a4aa-c1f16aac26dc
 # Figure 2.14: Quasi-steady state assumption(QSSA)
 function qssmodel!(du, u, p, t)
@@ -81,20 +73,6 @@ md"""
 # ╔═╡ dad21a13-b6cd-42e9-9e91-7d1cad429a2f
 u0re = LVector(b=sum(u0))
 
-# ╔═╡ d081fbfb-38e5-41f3-a7df-15aeaad241d5
-sol2 = solve(ODEProblem(remodel!, u0re, 3.0, p1));
-
-# ╔═╡ e62303ee-bfc2-4739-937a-0b3dcfb2fd70
-let tspan = 3.0
-	ts = 0.0:0.1:tspan
-	btilde = sol2(ts, idxs=1)
-	pl2 = plot(sol1, line=(:dash, 1),label=["A (full solution)" "B (full solution)"])
-	plot!(pl2, ts, (p1.KM1 / (p1.KM1 + p1.K1)) .* btilde, lab="A (rapid equilibrium)")
-	plot!(pl2, ts, (p1.K1 / (p1.KM1 + p1.K1))  .* btilde, lab="B (rapid equilibrium)")
-	plot!(pl2, title="Fig. 2.12 (Rapid equilibrium model)", xlabel="Time (arbitrary units)", ylabel="Concentration (arbitrary units)")
-	pl2
-end
-
 # ╔═╡ 04c217c0-b45a-424d-9177-ba7572234683
 md"""
 ## Figure 2.13: Rapid equilibrium 
@@ -113,20 +91,6 @@ u1re = LVector(b=sum(u1))
 
 # ╔═╡ fb63ca02-c5cd-4a1d-af76-9df041f0878a
 sol3full = solve(ODEProblem(fullmodel!, u1, 3.0, p2));
-
-# ╔═╡ 2c7610b1-6c25-40a3-8744-4ac561a8404a
-sol3re = solve(ODEProblem(remodel!, u0re, 3.0, p2));
-
-# ╔═╡ 7848a37a-ba43-4157-a2ce-97646ebf9e16
-let tspan = 3.0
-	ts = 0.0:0.1:tspan
-	btilde = sol3re(ts, idxs=1)
-	pl3 = plot(title="Fig. 2.13 Ref vs Fast equlibrium", xlabel="Time (arbitrary units)", ylabel="Concentration (arbitrary units)")
-	plot!(pl3, sol3full, line=(:dash, 1),label=["A (full solution)" "B (full solution)"])
-	plot!(pl3, ts, (p2.KM1 / (p2.KM1 + p2.K1)) .* btilde, lab="A (rapid equilibrium)")
-	plot!(pl3, ts, (p2.K1 / (p2.KM1 + p2.K1))  .* btilde, lab="B (rapid equilibrium)")
-	pl3
-end
 
 # ╔═╡ 626bdf4b-909d-42d3-aacd-6e30fc207494
 md"""
@@ -170,6 +134,42 @@ begin
     hill(x, k) = x / (x + k)
     hill(x, k, n) = hill(x^n, k^n)
     exprel(x) = ifelse(x≈zero(x), one(x), x / expm1(x))
+end
+
+# ╔═╡ d0392260-fbf8-4caa-baaa-4b282c45be5c
+# Fig 2.12: rapid equilibrium
+function remodel!(du, u, p, t)
+	@unpack K0, K1, KM1, K2 = p
+	kb = K2 * hill(K1, KM1)
+	du.b = K0 - kb * u.b
+end
+
+# ╔═╡ d081fbfb-38e5-41f3-a7df-15aeaad241d5
+sol2 = solve(ODEProblem(remodel!, u0re, 3.0, p1));
+
+# ╔═╡ e62303ee-bfc2-4739-937a-0b3dcfb2fd70
+let tspan = 3.0
+	ts = 0.0:0.1:tspan
+	btilde = sol2(ts, idxs=1)
+	pl2 = plot(sol1, line=(:dash, 1),label=["A (full solution)" "B (full solution)"])
+	plot!(pl2, ts, (p1.KM1 / (p1.KM1 + p1.K1)) .* btilde, lab="A (rapid equilibrium)")
+	plot!(pl2, ts, (p1.K1 / (p1.KM1 + p1.K1))  .* btilde, lab="B (rapid equilibrium)")
+	plot!(pl2, title="Fig. 2.12 (Rapid equilibrium model)", xlabel="Time (arbitrary units)", ylabel="Concentration (arbitrary units)")
+	pl2
+end
+
+# ╔═╡ 2c7610b1-6c25-40a3-8744-4ac561a8404a
+sol3re = solve(ODEProblem(remodel!, u0re, 3.0, p2));
+
+# ╔═╡ 7848a37a-ba43-4157-a2ce-97646ebf9e16
+let tspan = 3.0
+	ts = 0.0:0.1:tspan
+	btilde = sol3re(ts, idxs=1)
+	pl3 = plot(title="Fig. 2.13 Ref vs Fast equlibrium", xlabel="Time (arbitrary units)", ylabel="Concentration (arbitrary units)")
+	plot!(pl3, sol3full, line=(:dash, 1),label=["A (full solution)" "B (full solution)"])
+	plot!(pl3, ts, (p2.KM1 / (p2.KM1 + p2.K1)) .* btilde, lab="A (rapid equilibrium)")
+	plot!(pl3, ts, (p2.K1 / (p2.KM1 + p2.K1))  .* btilde, lab="B (rapid equilibrium)")
+	pl3
 end
 
 # ╔═╡ Cell order:

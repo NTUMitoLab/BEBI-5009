@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -87,7 +87,8 @@ end
 function reduced_model!(du, u, p, t)
 	@unpack ET, K1, KM1, K2 = p
 	@unpack S = u
-	du.S = -K2 * ET * hill(S, (KM1 + K2) / K1)
+	km = (KM1 + K2) / K1
+	du.S = -K2 * ET * hill(S, km)
 	return du
 end
 

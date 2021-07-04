@@ -1,5 +1,5 @@
 ### A Pluto.jl notebook ###
-# v0.14.6
+# v0.14.8
 
 using Markdown
 using InteractiveUtils
@@ -35,17 +35,8 @@ Running environment and some auxillary functions.
 **You can use [this helper tool](https://fonsp.com/article-test-3/pkghelper.html) to generate these commands!**
 """
 
-# ╔═╡ fcfca624-1ff7-4a60-bd17-d7d32e46de40
-begin
-	# Convenience functions
-    hill(x, k) = x / (x + k)
-    hill(x, k, n) = hill(x^n, k^n)
-    exprel(x) = ifelse(x≈zero(x), one(x), x / expm1(x))
-end
-
 # ╔═╡ Cell order:
 # ╠═73adcc40-bdcc-11eb-06eb-970be2047c7c
 # ╠═ad29e65b-99e2-4fe9-af31-4c29c97aed9b
 # ╠═0f5b8cf2-9b58-40d2-8db1-f61baaf353fe
-# ╠═fcfca624-1ff7-4a60-bd17-d7d32e46de40
 # ╠═cabdb8f7-3d78-422f-bc78-b87fd22eb1d8
