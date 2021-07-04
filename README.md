@@ -103,6 +103,7 @@ You'll need to reload the browser window after the first cell is executed to loa
 - [Introduction to Julia](intro-to-julia.html ":ignore")
 - [Control flow and functions](control-flow.html ":ignore")
 - [Collections, broadcasting, methods, and Package management](collections-dot-methods.html ":ignore")
+- [Stachastic simulation algorithms (SSAs)](ssa.html ":ignore")
 
 ### Agent-Based modeling (ABM)
 
