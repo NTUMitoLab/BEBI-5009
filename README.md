@@ -100,6 +100,7 @@ You'll need to reload the browser window after the first cell is executed to loa
 - [Control flow and functions](control-flow.html ":ignore")
 - [Collections, broadcasting, methods, and Package management](collections-dot-methods.html ":ignore")
 - [Introduction to Plotting](plotting.html ":ignore")
+- [Solving differential equations](diffeq.html ":ignore")
 - [Stachastic simulation algorithms (SSAs)](ssa.html ":ignore")
 
 ### Agent-Based modeling (ABM)
