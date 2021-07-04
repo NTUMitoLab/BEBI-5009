@@ -13,10 +13,11 @@ begin
 		Pkg.PackageSpec(name="Plots", version="1"),
     ])
 	using PlutoUI, Plots
-	PlutoUI.TableOfContents()
-	
+
 	# Backends and default options (optional)
 	Plots.gr(fmt=:png, lw=2)
+	
+	PlutoUI.TableOfContents()
 end
 
 # ╔═╡ fa82e5e0-dca1-11eb-0572-b3af66be1bde
