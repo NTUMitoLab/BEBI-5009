@@ -11,6 +11,7 @@ before_script:
             Pkg.activate(mktempdir());
             Pkg.add([
               Pkg.PackageSpec(name="PlutoSliderServer", version="0.2"),
+              Pkg.PackageSpec(name="Pluto"),
             ]);
 
             import PlutoSliderServer;
